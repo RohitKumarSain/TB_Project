@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation</title>
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .box1{
+            margin: 20px;
+            padding: 10px;
+            width: 250px;
+            height: 150px;
+            border: 1px solid;
+        }
+        
+        .make {
+            font-size: 40px;
+            text-align: center;
+            text-transform: uppercase;
+            color: rgb(165, 165, 165);
+            font-weight: bold;
+        }
+        
+        .box1 > .lifestyle {
+            margin: 5px;
+            font-size: 40px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: lightgreen;
+            font-weight: bold;
+        }
+        
+        .awesome {
+            font-size: 40px;
+            text-align: center;
+            text-transform: uppercase;
+            color: rgb(165, 165, 165);
+            font-weight: bold;
+        }
+        
+        .box2{
+            margin: 20px;
+            padding: 10px;
+            width: 250px;
+            height: 150px;
+            border: 1px solid;
+        }
+        
+        .box2 > .work {
+            display: inline;
+            margin: 2px;
+            padding: 3px;
+            font-size: 40px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: skyblue;
+            font-weight: bold;
+            position: relative;
+            top: 5px;
+            left: 55px;
+        }
+        .box2 > .awesome {
+            margin-top: 12px;
+            font-size: 40px;
+            text-align: center;
+            text-transform: uppercase;
+            color: rgb(165, 165, 165);
+            font-weight: bold;
+        }
+
+        .box3 {
+            margin: 20px;
+            padding: 10px;
+            width: 300px;
+            height: 150px;
+            border: 1px solid;
+        }
+        
+        .box3 > .everything{
+            display: grid;
+            margin: 5px;
+            font-size: 40px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: red;
+            font-weight: bold;
+        }
+        
+        /* Animation begin here  */
+        .box1:hover{
+            border-radius: 10px;
+            box-shadow: 10px 10px rosybrown;
+            background-color: lavender;
+        }
+        .box1:hover > .make{
+            text-shadow: 2px 2px 4px #111;
+            font-style: italic;
+            animation: make1 1s linear infinite alternate ;
+        }
+
+        .box1:hover > .awesome{
+            text-shadow: 2px 2px 4px #111;
+            font-style: italic;
+            animation: awesome 1s linear infinite alternate ;
+        }
+
+        .box1:hover > .lifestyle{
+            box-shadow: -5px 5px honeydew;
+            text-shadow: 2px 2px 2px lightslategray;
+            background-color: black;
+            animation: lifestyle 1s linear infinite alternate ;
+        }
+
+        .box2:hover{
+            width: 350px;
+            height: 210px;
+            background-image: linear-gradient(red,orange,yellow,green,blue,indigo,violet);
+            border: 2px dotted cornflowerblue;
+            border-radius: 10px ;
+            box-shadow: 10px 10px goldenrod;
+        }
+
+        .box2:hover > .make{
+            font-size: 60px;
+            text-shadow: 2px 2px 4px lightcyan;
+            animation: make2 6s linear infinite forwards;
+        }
+
+        .box2:hover > .work{
+            text-shadow: 2px 2px 4px goldenrod;
+            position: relative;
+            left: 75px;
+            font-size: 60px;
+            color: black;
+            background-color: khaki;
+            box-shadow: 2px 2px 4px red;
+            animation: work 2s linear infinite;
+        }
+
+        .box2:hover > .awesome{
+            text-shadow: 0px 5px black;
+            font-size: 60px;
+            animation: awesome2 2s linear infinite;
+        }
+
+        .box3:hover {
+            border: none;
+            box-shadow: 4px 4px red;
+        }
+
+        .box3:hover > .make {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-shadow: 2px 2px black;
+            color: red;
+            transform: translateX(20%);
+        }
+
+        .box3:hover > .awesome{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-transform: lowercase;
+            font-style: italic;
+            color: red;
+            transform: translateX(-20%)
+        }
+
+        .box3:hover > .everything {
+            background-color: white;
+            color: #111;
+            border-radius: 10px;
+            box-shadow: 2px 2px skyblue;
+            font-family: cursive;
+            animation: everything 1s linear infinite alternate;
+        }
+
+        @keyframes make1 { 
+            0%{
+                transform: translateX(0%);
+            }
+            20%{
+                color: lightcyan;
+            }
+            40%{
+                color: lightsalmon;
+            }
+            
+            60%{
+                color: skyblue;
+            }
+            100%{
+                color: violet;
+                transform: translateX(10%);
+            }
+        }
+
+        @keyframes awesome { 
+            0%{
+                color: lightgreen;
+                transform: translateX(0%);
+            }
+            20%{
+                color: lightcyan;
+            }
+            40%{
+                color: lightsalmon;
+            }
+            
+            60%{
+                color: skyblue;
+            }
+            100%{
+                color: violet;
+                transform: translateX(-8%);
+            }
+        }
+
+        @keyframes make2 {
+
+            0%{
+                transform: translate(0%);
+                color: yellowgreen;
+                position: relative;
+                right: 100px;
+                bottom: 20px;
+            }
+            25%{
+                color: royalblue;
+                transform: translateX(55%);
+            }
+            50%{
+                position: relative;
+                left: -100px;
+                color: orange;
+                transform: translateX(55%) translateY(240%);
+            }
+            75%{      
+                position: relative;
+                left: 0px;
+                color: rosybrown;
+                transform:translateY(230%) translateX(-28%);
+            }
+            100%{
+                transform: translateY(-15%) translateX(-28%);
+                color: red;
+            }
+        }
+
+        @keyframes work {
+
+            0%{
+                color: lavenderblush;
+                transform: translate(100%);
+            }
+            50%{
+                color: cadetblue;
+                transform: translateY(250%);
+            }
+            100%{
+                transition: ease-in;
+            }
+        }
+
+        @keyframes awesome2 {
+            
+            0%{
+                color: lavenderblush;
+                transform: translate(0%);
+            }
+            50%{
+                color: cadetblue;
+                transform: translateY(-250%);
+            }
+            100%{
+                transition: ease-in;
+            }
+            
+        }
+
+        @keyframes everything {
+            
+            0%{
+                color: red;
+                text-shadow: 10px 0px black;
+            }
+            100%{
+                color: rosybrown;
+            }
+        }
+
+        </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="make">
+            Make
+        </div>
+        <div class="lifestyle">
+            Lifestyle
+        </div>
+        <div class="awesome">
+            Awesome!
+        </div>
+    </div>
+
+    <div class="box2">
+        <div class="make">
+            Make
+        </div>
+        <div class="work">
+            Work
+        </div>
+        <div class="awesome">
+            Awesome!
+        </div>   
+    </div>
+
+    <div class="box3">
+        <div class="make">
+            Make
+        </div>
+        <div class="everything">
+            Everything
+        </div>
+        <div class="awesome">
+            Awesome!
+        </div>   
+    </div>
+</body>
+</html>
