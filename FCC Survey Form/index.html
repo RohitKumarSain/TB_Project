@@ -49,15 +49,15 @@
             <form>
                 <div class="container-1">
                     <label for="name" >Name</label>
-                    <input type="text" placeholder="Enter your name">
+                    <input type="text" placeholder="Enter your name" required>
                     <label for="email">Email</label>
-                    <input type="email" name="email" placeholder="Enter your Email">
+                    <input type="email" name="email" placeholder="Enter your Email" required>
                     <label for="age">Age <span class="small-label">(optional)</span>
                     </label>
                     <input type="number" placeholder="Age">
                 </div>
                 <label for="role">Which option best describes your current role?</label>
-                <select name="role" class="select">
+                <select name="role" class="select" required>
                     <option disabled selected class="default-select">Select current role</option>
                     <option value="student">Student</option>
                     <option value="ftj">Full Time Job</option>
@@ -127,10 +127,10 @@
                 <label  >Any comments or suggestions?</label>
                 <textarea class="comment"
                 placeholder="Enter your comment here..."></textarea>
-            </form>
-
-            <button class="submit"
+                
+                <button class="submit"
             type="submit">Submit</button>
+            </form>
 
         </div>
     </main>
