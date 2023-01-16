@@ -1,0 +1,299 @@
+:root {
+  --white: #fff;
+  --black: #010101;
+  --green: #47cf73;
+  --gray: #444857;
+  --dark-purple: #1b1b32;
+  --lightgray: #9b9dad;
+  --form-bg: rgba(27, 27, 50, 0.8);
+  --poppins: "Poppins", sans-serif;
+  --lato: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--white);
+  background-color: var(--dark-purple);
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+    url("https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  max-width: 100vw;
+  z-index: -1;
+  font-family: var(--poppins);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  font-family: var(--lato);
+  background-color: var(--black);
+  width: 100vw;
+  height: 72px;
+}
+
+button {
+  height: 19px;
+}
+a {
+  text-decoration: none;
+}
+
+.header-left svg {
+  margin: 19px 0 0 8px;
+  width: 34px;
+  background-color: transparent;
+  fill: var(--white);
+}
+
+.header {
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+}
+
+.header-right {
+  display: flex;
+  gap: 10px;
+  margin: 11px 12px 10px 0;
+}
+
+.header-left a {
+  text-decoration: none;
+  color: var(--white);
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.header-title {
+  margin-left: 9px;
+  margin-top: 8px;
+}
+
+.header-title .title {
+  max-width: 100%;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.title-caption a {
+  color: var(--lightgray);
+}
+
+.title-caption {
+  padding: 5px 0 0 0;
+  display: flex;
+}
+
+.title_caption {
+  font-size: 0.9rem;
+}
+
+.follow-button {
+  display: flex;
+  border-radius: 3px;
+  margin-left: 6px;
+  font-size: 0.78rem;
+  border: none;
+  background-color: var(--green);
+}
+
+.follow-button svg {
+  fill: var(--black);
+  margin: 4px 0 0 4px;
+  width: 11px;
+}
+
+.follow-button span {
+  color: var(--black);
+  margin: 3px 5px;
+}
+
+.header-right div {
+  background-color: var(--gray);
+  padding: 14px 20px;
+  border-radius: 5px;
+}
+
+.love svg {
+  margin-top: 2px;
+  fill: var(--white);
+  width: 18px;
+}
+
+.header-right a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.header-right span {
+  font-size: 1.1rem;
+}
+
+.header-right .signup {
+  background-color: var(--green);
+  color: var(--black);
+}
+
+.container {
+  margin: 3.125rem auto 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+.container p {
+  font-weight: 200;
+  font-size: 20px;
+  font-style: italic;
+  text-shadow: 1px 1px 1px var(--lightgray);
+}
+
+.survey-form {
+  margin-top: 40px !important;
+  border-radius: 5px;
+  padding: 40px;
+  background-color: var(--form-bg);
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container label,
+input,
+select,
+textarea,
+button {
+  font-size: 20px;
+  text-align: left;
+  display: block;
+}
+
+label {
+  margin: 0.5rem 0;
+}
+
+.container-1 input {
+  font-size: 1.2rem;
+  padding: 15px;
+  border-radius: 5px;
+  width: 100%;
+  height: 42px;
+  margin-bottom: 2rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.radio label input {
+  text-align: left;
+}
+
+.radio span {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox span {
+  display: flex;
+  align-items: center;
+}
+
+.small-label {
+  font-size: 1rem;
+}
+
+.select,
+.default-select {
+  color: #495057;
+  width: 100%;
+  height: 42px;
+  border-radius: 5px;
+}
+
+.comment {
+  padding: 10px;
+  width: 100%;
+  min-height: 120px;
+}
+
+.comment[placeholder],
+input[placeholder],
+.select[placeholder] {
+  font-family: var(--poppins);
+}
+
+.submit {
+  cursor: pointer;
+  color: var(--white);
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  background-color: var(--green);
+  font-family: var(--poppins);
+}
+
+@media only screen and (max-width: 550px) {
+  .follow-button,
+  .love,
+  .editor {
+    display: none;
+  }
+
+  .header-title .title {
+    max-width: 100%;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .title-caption a {
+    font-size: 0.8rem;
+    color: var(--lightgray);
+  }
+
+  .signup,
+  .login {
+    padding: 10px;
+  }
+
+  .header-right span {
+    font-size: 1rem;
+  }
+
+  .header-right div {
+    background-color: var(--gray);
+    padding: 10px 8px;
+    border-radius: 5px;
+  }
+
+  .header {
+    height: 70%;
+  }
+}
